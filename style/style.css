@@ -1,0 +1,256 @@
+/* start  vars */
+:root{
+    --main-color:#19c8fa;
+    --blue-color:rgb(15 116 143 /70%);
+}
+
+/* end p vars */
+/* start global ruls */
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 97px;
+
+}
+
+
+/* end global ruls */
+
+
+/* start header */
+header{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 97px;
+}
+
+
+/* for bottom baner */
+header .container::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color:#a2a2a2;
+    bottom: 0;
+    width: calc(100% - 30px);
+    left: 15px;
+}
+
+
+header nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+header nav .toggel-menu{
+    color: white;
+    font-size: 22px;
+
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li a{
+    padding: 40px 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+
+header nav ul li a.active,
+header nav ul li a:hover,
+.rbtn:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color) ;
+}
+
+
+.rbtn{
+    /* width: 40px; */
+    height: 40px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+    color: white;
+    background-color: black;
+}
+/* end header */
+
+/* ////////////////////////////////////////////////////////////////////HOME////////////////////////////////////////////////////////////////////////// */
+
+/* start home */
+.home{
+    min-height: 100vh;
+    background-color: #1f2021;
+    background: url(../img/back.jpg);
+    background-size: cover;
+    position: relative;
+   
+}
+.home .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/ 40%);
+}
+.home .text{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(60% - 30px);
+    padding: 50px;
+    background-color: var(--blue-color);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.home .text .cont{
+    max-width: 500px;
+}
+.home .text .cont h2{
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.home .text .cont p{
+    font-size: 14px;
+    line-height: 2;   
+}
+
+.home .change-background{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.home .fa-angle-left{
+left: 30px;
+}
+.home .fa-angle-right{
+    right: 30px;
+}
+.home .bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+}
+.home .bullets li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.home .bullets li.active{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+/* end home */
+
+
+
+/* //////////////media /////////// */
+
+
+
+
+/* media queary Code  */
+/* small */
+@media (min-width: 768px)
+{
+    .container{
+        width: 750px;
+    }
+    header nav .toggel-menu{
+        display: none;
+    }
+}
+
+/* mediem */
+@media (min-width: 992px)
+{
+    .container{
+        width: 970px;
+    }
+}
+
+/* larg */
+@media (min-width: 1200px)
+{
+    .container{
+        width: 1170px;
+    }
+}
+
+
+
+
+@media(max-width:767px)
+{
+    header nav ul{
+        display: none;
+    }
+    header nav .toggel-menu:hover + ul{
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       width: 100%;
+       background-color: rgba(0, 0,0, 50%);
+    
+    }
+    header nav .toggel-menu:hover + ul li a{
+        padding: 15px;
+    }
+    .home .text{
+        width: 100%;
+    }
+    .home .text .cont{
+        width: 100%;
+    }
+    .home .change-background{
+        display: none;
+    }
+
+}

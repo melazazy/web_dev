@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+
     <!-- normalizition -->
     <link rel="stylesheet" href="./style/normalize.css">
 
@@ -20,6 +21,8 @@
 
     <!-- main style -->
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
     <title>Document</title>
 </head>
@@ -35,12 +38,12 @@
                 <!-- for toggle menu -->
                 <i class="fas fa-bars toggel-menu"></i>
                 <ul>
-                    <li><a href="#home" class="active" id="home">Home</a></li>
-                    <li><a href="#services" id="services">services</a></li>
-                    <li><a href="#story" id="story">My Story</a></li>
-                    <li><a href="#skill" id="skill">Skill</a></li>
-                    <li><a href="#projects" id="project">Projects</a></li>
-                    <li><a href="#reviews" id="review">Reviews</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#story">My Story</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                 </ul>
             </nav>
             <!-- Left -->
@@ -57,7 +60,8 @@
             <div class="cont">
                 <h2>Welcome <br>
                     Mustafa Elazazy</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium neque nulla adipisci, totam
+                <p id="chang1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium neque nulla
+                    adipisci, totam
                     illum
                     officia velit, sapiente optio harum enim dignissimos facere, sequi expedita. Illo optio laudantium,
                     incidunt nulla recusandae doloremque accusamus eligendi molestias laboriosam tenetur voluptate,
@@ -76,12 +80,66 @@
     </div>
     <!-- end home -->
 
+    <!-- start Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <div class="main-heading">
+                <h2>Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim neque tempore magnam ipsam aliquam
+                    eaque
+                </p>
+            </div>
+            <div class="services-container">
+                <div class="services-box">
+                    <i class="fas fa-paint-brush fa-3x"></i>
+                    <div class="text">
+                        <h3>Web Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nobis, accusantium nostrum
+                            deserunt tenetur animi aut vero sed assumenda optio
+                        </p>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <i class="fas fa-laptop-code fa-3x"></i>
+                    <div class="text">
+                        <h3>Web devoloping</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nobis, accusantium nostrum
+                            deserunt tenetur animi aut vero sed assumenda optio
+                        </p>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <i><img src="./img/cms.png" alt="cms" width="60px"></i>
+                    <!-- <i class="fab fa-chrome fa-3x"></i> -->
+                    <div class="text">
+                        <h3>C-M-S</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nobis, accusantium nostrum
+                            deserunt tenetur animi aut vero sed assumenda optio
+                        </p>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <i class="fas fa-chart-line fa-3x"></i>
+                    <div class="text">
+                        <h3>Analize</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nobis, accusantium nostrum
+                            deserunt tenetur animi aut vero sed assumenda optio
+                        </p>
+                    </div>
+                </div>
 
+            </div>
+
+
+        </div>
+    </div>
+    <!-- end Services -->
 
 
 
 
     <script src="./js/script.js"></script>
+
 </body>
 
 </html>
